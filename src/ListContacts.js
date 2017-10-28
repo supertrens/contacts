@@ -1,5 +1,5 @@
-import React , {Component} from 'react'
-import {Link}  from 'react-router-dom'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import escapeRegExp from 'escape-string-regexp'
 import sortBy from 'sort-by'
@@ -21,7 +21,7 @@ class ListContacts extends Component {
 
  //This is the function that will be update when the user type in the
  //search box
- updateQuery = (query) =>{
+ updateQuery = (query) => {
  	this.setState ({query : query.trim()}) 
  }
 
@@ -55,7 +55,7 @@ class ListContacts extends Component {
 	  return (
 	    <div className ="list-contacts">
 	    	<div className ="list-contacts-top">
-	    		<input
+	    		<input 
 	    			className="search-contacts"
 	    			type ="text"
 	    			placeholder = "Search contacts"
@@ -63,10 +63,10 @@ class ListContacts extends Component {
 	    			onChange ={(event) => this.updateQuery(event.target.value)}
 	    		/>
 
-	    		<Link 
-	    			to ="/create"
-	    			className ="add-contact">
-	    		 Add Contact </Link>
+	    		<Link  to ="/create" className ="add-contact">
+	    		  Add Contact 
+	    		</Link>
+
 	    	</div>
 
 	    	{
